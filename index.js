@@ -29,6 +29,7 @@ let redisStore = new RedisStore({
   client: redisClient
 });
 
+app.enable('trust proxy');
 app.use(cors())
 
 app.use(session({
