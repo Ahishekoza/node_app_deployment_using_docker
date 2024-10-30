@@ -67,6 +67,6 @@ app.get("/api/", (req, res) => {
   console.log("Idea for Business");
 });
 
-app.listen(process.env.PORT || 3000, () => {
+app.listen(process.env.PORT , () => {
   console.log(`Server listening on port ${process.env.PORT}`);
 });
