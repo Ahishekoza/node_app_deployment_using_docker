@@ -1,0 +1,9 @@
+version: '3'
+services:
+  nginx:
+    ports:
+      - "4000:80"
+  node-app:
+    environment:
+      - PORT=4000
+    command: node index.js
