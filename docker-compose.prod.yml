@@ -5,11 +5,11 @@ services:
       - "80:80"
   node-app:
     environment:
-      - PORT=4000
-      - MONGO_USERNAME=sanjeev
-      - MONGO_PASSWORD=mypassword
-      - MONGO_PORT=27017
-      - REDIS_HOST=redis
-      - REDIS_PORT=6379
-      - SESSION_SECRET=mysecret
+      - PORT=${PORT}
+      - MONGO_USERNAME=${MONGO_USERNAME}
+      - MONGO_PASSWORD=${MONGO_PASSWORD}
+      - MONGO_PORT=${MONGO_PORT}
+      - REDIS_HOST=${REDIS_HOST}
+      - REDIS_PORT=${REDIS_PORT}
+      - SESSION_SECRET=${SESSION_SECRET}
     command: node index.js

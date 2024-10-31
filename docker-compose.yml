@@ -10,14 +10,16 @@ services:
   node-app:
     build: 
       context: .
+    env_file:
+      - .env
     depends_on:
       - mongo
 
   mongo:
     image: mongo:latest
     environment:
-      - MONGO_INITDB_ROOT_USERNAME=sanjeev
-      - MONGO_INITDB_ROOT_PASSWORD=mypassword
+      - MONGO_INITDB_ROOT_USERNAME=${MONGO_INITDB_ROOT_USERNAME}
+      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_INITDB_ROOT_PASSWORD}
     volumes:
       - mongo-db:/data/db
   
