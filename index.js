@@ -64,7 +64,7 @@ app.use('/api/v1/posts', router);
 app.use('/api/v1/users', userRouter);
 
 app.get("/api/", (req, res) => {
-  res.send("<h1>Hi Abhishek</h1>");
+  res.send("<h1>Hi Abhishek!!!</h1>");
   console.log("Idea for Business");
 });
 
